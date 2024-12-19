@@ -1,3 +1,4 @@
+# Import necessary libraries
 import io
 import random
 import time
@@ -11,8 +12,10 @@ import torch
 
 MINUTES = 60
 
+# Create modal app
 app = modal.App("example-text-to-image-01")
 
+# Install required libraries
 image = (
     modal.Image.debian_slim(python_version="3.12")
     .pip_install(
